@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="h1">Heading</h1>
+
+    <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore laborum sint ratione libero eligendi nulla iusto nisi quam laboriosam ipsum? Excepturi aspernatur non vel consequuntur eaque quisquam sunt eum neque?</p>
+
+    <a href="x.html" id="anc">LINK</a>
+
+    <img src="x.jpg" alt="No Image" id="i1" >
+
+    <input type="text" value="TestInp123" id="inp">
+
+    <script>
+
+        var inp_tag = document.getElementById('inp');
+        var img_tag = document.getElementById('i1');
+
+        console.log(inp_tag)
+        console.log(inp_tag.value)
+        console.log(img_tag)       
+        console.log(img_tag.alt)
+
+        img_tag.alt = inp_tag.value
+
+    </script>
+    
+</body>
+</html>
