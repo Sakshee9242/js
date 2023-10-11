@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .harsh 
+        {
+            color:blue;
+            background: lightsalmon;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- var = tag
+    var.method()
+    var.atribute -->
+
+    <h1 id="test">Heading</h1>
+
+    <i id="test1"></i>
+
+    <input type="text" id="inp">
+
+    <a href="c.html" id="anc">HELLO</a>
+     
+    <img src="x.jpg" alt="No image">
+
+    <script>
+
+      let h1_blkah =  document.getElementById('test');
+
+      let i_tag =  document.getElementById('test1')
+
+      a_tag = document.getElementById('anc')
+
+      inp_tag = document.getElementById('inp')
+    
+      a_tag.href = "mann.html"
+
+
+      inp_tag.value = a_tag.href
+
+
+      console.log(h1_blkah)
+      console.log(i_tag)
+
+    //   h1_blkah.style.color ="red"
+    //   h1_blkah.style.fontSize = "80px"
+    // h1_blkah.className = "harsh"
+
+    // h1_blkah.classList.add("harsh")
+
+//  h1_blkah.innerHTML = "harsh123"
+
+//  x = 12
+
+    i_tag.innerHTML = h1_blkah.innerHTML
+    // alert(h1_blkah.innerHTML)
+    console.log(h1_blkah.innerHTML)
+
+    h1_blkah.innerHTML = i_tag.id
+
+    </script>
+    
+</body>
+</html>
