@@ -6,16 +6,11 @@
     <title>Document</title>
 </head>
 <body>
+   <script>
+       x=300, y=200, z=400, a=500;
 
-    <script>
-    x=30,
-    y=56,
-
-
-    max = (x>y)||(x>y) ? true:false;
-
-     document.write(max)
-    </script>
-    
+max = (x>y && x>z && x>a) ? x : (y>z && y>a ) ? y : (z>a) ? z:a;
+document.write(max)
+   </script>
 </body>
 </html>
