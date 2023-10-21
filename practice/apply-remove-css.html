@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h">Hello</h1>
+    <button id="b1" onclick="AddCss()">ADD SAKSHEE</button>
+    <button id="b2" onclick="RemoveCss()">REMOVE SAKSHEE</button>
+    <button id="b3"  onclick="AddRemoveCss()">ADD SAKSHEE</button>
+
+    <script>
+        var h1_tag = document.getElementById("h")
+        var b1_tag = document.getElementById("b1")
+
+        function AddCss()
+        {
+            h1_tag.style.color = "red"
+        }
+        // AddCss()
+        function RemoveCss()
+        {
+            h1_tag.style.color = ""
+        }
+        // RemoveCss()
+
+        function AddRemoveCss(){
+            if( h1_tag.style.color==""){
+                h1_tag.style.color = "red" 
+            }
+            else{
+                h1_tag.style.color = "#000000" 
+            }
+            if( h1_tag.style.color==""){
+                h1_tag.classList.add("xyz")
+                h1_tag.className ="xyz"
+            }
+            else 
+          {
+             h1_tag.classList.remove("xyz")
+            
+            h1_tag.className =""
+              }
+        }
+        h1_tag.classList.toggle('xyz')
+
+    </script>
+</body>
+</html>
