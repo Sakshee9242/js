@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Firstname: <input type="text" id="inp"/>
+    <span id="nmErr"></span>
+    <input type="submit" value="Validate" onclick=" Validate()">
+   
+    
+
+    <script>
+        var input_tag = document.getElementById('inp');
+
+       var sp_tag = document.getElementById('nmErr');
+
+        // input_tag.value=""
+       
+
+       function Validate()
+       {
+        if(input_tag.value=="")
+        {
+            // alert("required...!")
+            // console.log("Required..!")
+            // document.write("required..!")
+            input_tag.style.border = "2px solid red"
+            sp_tag.innerHTML ="* Required..!"
+            sp_tag.style.color ="red"
+        }
+
+        else 
+        {
+            // sp_tag.innerHTML ="OK..!"
+            // sp_tag.style.color ="green"
+            sp_tag.innerHTML =""
+            input_tag.style.border = "2px solid green"
+        }
+       }
+
+      
+      
+
+       
+    </script>
+</body>
+</html>

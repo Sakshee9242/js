@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <input type="text" id="inp" onkeypress="GetText()"> -->
+     <!-- <input type="text" id="inp" onkeydown="GetText()"> -->
+
+    <!-- <input type="text" id="inp" onblur="GetText()"> -->
+
+
+   
+
+    <input type="text" id="inp" onkeyup="GetText()">
+
+
+    <textarea id="txtarea" ></textarea>
+    
+
+    <script>
+        var i_tag = document.getElementById('inp');
+        var t_area = document.getElementById("txtarea");
+
+        // console.log(i_tag);
+        // console.log(i_tag.value);//inpu
+        // console.log(t_area);
+        // t_area.innerHTML ="hello"
+        
+        // x=12
+
+        console.log(t_area.innerHTML);//inpu
+        i_tag.style.color="red"
+            i_tag.style.border="2px solid gray"
+        function GetText()
+        {
+            t_area.innerHTML = i_tag.value
+           
+            t_area.style.color="green"
+        }
+    </script>
+</body>
+</html>
