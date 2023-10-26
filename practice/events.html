@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h2"></h1>
+    <p id="p1" onclick="Test1()">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequuntur tempora dolores modi, impedit quas obcaecati et reiciendis asperiores corrupti.</p>
+    <input type="text" value="" id="i1">
+    <a href="a.html" id="a1"></a>
+    <img src="" alt="No img" id="img1" onmouseenter="Test()">
+
+    <script>
+        var h1_tag = document.getElementById("h2");
+        var p_tag =  document.getElementById("p1");
+        var inp_tag = document.getElementById("i1");
+        var img1_tag = document.getElementById("img1")
+
+        function Test(){
+           img1_tag.alt = "Sakshee" 
+           img1_tag.src = "https://images.unsplash.com/photo-1682687982046-e5e46906bc6e?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8"
+           img1_tag.style.opacity = "1"
+           img1_tag.style.transition = "2s"
+
+        }
+        function Test1(){
+            h1_tag.innerHTML = "Heading"
+            h1_tag.style.color = "red"
+        }
+
+
+        
+
+
+    </script>
+</body>
+</html>

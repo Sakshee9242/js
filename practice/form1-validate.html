@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="Validate()">
+    First Name: <input type="text" id="inp1">
+    <!-- <b id="nmErr"></b> -->
+    <br>
+    <br>
+    Last Name: <input type="text" id="inp2">
+    <br>
+    <br>
+    <input type="submit" value="Validate">
+</form>
+
+<script>
+    var fr_tag = document.getElementById("inp1")
+    var lr_tag = document.getElementById("inp2")
+    var b_tag = document.getElementById("nmErr")
+
+    function Validate(){
+        if(fr_tag.value ==""){
+            alert("required");
+            return false;
+        }
+        if(lr_tag.value ==""){
+            alert("lname required");
+        }
+    }
+</script>
+    
+</body>
+</html>

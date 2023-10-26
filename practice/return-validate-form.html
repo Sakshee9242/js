@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    FirstName: <input type="text" name="" id="frnm">
+    <span id="sp1"></span>
+
+    <input type="submit" id="srnm" onclick=" return Validate()">
+</form>
+    <script>
+        var frnm = document.getElementById("frnm")
+        var span_tag = document.getElementById("sp1")
+
+        function Validate(){
+            if(frnm.value ==""){
+                span_tag.innerHTML = "Required....!"
+            return false;
+        }
+        else{
+            span_tag.innerHTML = "Okay....!"
+        }
+        }
+    </script>
+</body>
+</html>
