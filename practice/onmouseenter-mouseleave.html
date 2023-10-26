@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1" onmouseenter="ChangeText()" onmouseleave="ChangeText1()">paragraph</p>
+    <h1 id="heading"></h1>
+    <button onmouseenter="MouseEnter()">ChangeText</button>
+    <script>
+        p_tag = document.getElementById("p1")
+        console.log(p_tag.innerHTML)
+        function MouseEnter(){
+            h1_tag = document.getElementById("heading")
+            h1_tag.innerHTML = "hello"
+        }
+        function ChangeText(){
+            p_tag = document.getElementById("p1")
+            p_tag.innerHTML = "Charvi"
+
+        }
+        function ChangeText1(){
+            p_tag = document.getElementById("p1")
+            p_tag.innerHTML = "paragraph"
+
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    FirstName : <input type="text" id="inp1">
+    <span id="sp"></span>
+    <input type="submit" value="validate" onclick="Validate()">
+    <script>
+        var inp_tag = document.getElementById("inp1")
+        var sp_tag = document.getElementById("sp")
+
+        function Validate() {
+            if (inp_tag.value == "") {
+                inp_tag.style.border = " 2px solid red"
+                sp_tag.innerHTML = "* Required..!"
+                sp_tag.style.color = "red"
+            }
+            else{
+                sp_tag.innerHTML = "okay"
+                inp_tag.style.border = " 2px solid green"
+            }
+        }
+    </script>
+</body>
+
+</html>

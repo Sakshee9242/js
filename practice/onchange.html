@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="para">paragraph</p>
+    <button onclick="OnChange()">Change text</button>
+
+    <script>
+        p_tag = document.getElementById("para")
+        console.log(p_tag.innerHTML)
+        function OnChange() {
+            if(p_tag.innerHTML=="paragraph")
+            {
+               
+                 p_tag.innerHTML = "Sakshee"
+            }
+
+            else 
+            {
+                p_tag.innerHTML="Para"
+            }
+           
+        }
+    </script>
+</body>
+
+</html>
