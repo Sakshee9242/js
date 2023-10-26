@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form>
+    Firstname: <input type="text" id="fname">   
+    <span id="nmErr"></span>
+
+    <input type="submit" onclick=" return validate()">
+
+   </form>
+
+   <script>
+
+    var fnm = document.getElementById('fname');
+    var sp1 = document.getElementById('nmErr')
+    
+    function validate()
+    {
+        if(fnm.value == "")
+        {   
+            sp1.innerHTML =" * Required..!";
+            return false;
+        }
+    }
+  </script>
+    
+</body>
+</html>

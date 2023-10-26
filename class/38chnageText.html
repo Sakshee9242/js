@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <h1 id="h1" onmouseleave="GetOriginalText()" onpointerenter="ChangeText()">Piyush</h1> -->
+
+
+    <h1 id="h1"  onclick="ChangeText()">Piyush</h1>
+    <!-- <input type="text" id="inp1" onkeypress="GetText()"> -->
+
+    <!-- <input type="text" id="inp1" onkeydown="GetText()"> -->
+
+    <input type="text" id="inp1" onkeyup="GetText()">
+
+
+    <textarea id="txtArea"></textarea>
+
+    <script>
+        var input_tag = document.getElementById('inp1');
+        var txt_tag = document.getElementById('txtArea');
+
+        console.log(input_tag);
+        console.log(input_tag.value);//Hello
+        console.log(txt_tag)
+      
+        function GetText()
+        {
+            txt_tag.innerHTML = input_tag.value
+        }
+
+
+
+        var xyz = document.getElementById('h1');
+
+        function ChangeText()
+        {
+            // x=12
+            // xyz.innerHTML ="Hardik"
+
+            if(xyz.innerHTML=="Piyush")
+            {
+                xyz.innerHTML ="Hardik"
+            }
+            else 
+            {
+                xyz.innerHTML ="Piyush"
+            }
+        }
+
+        // function GetOriginalText()
+        // {
+        //     xyz.innerHTML ="Hardik123"
+        // }
+        
+
+    </script>
+    
+</body>
+</html>

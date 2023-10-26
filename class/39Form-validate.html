@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="validate()">
+        Firstname :
+     <!-- <input type="text" id="inp1" onblur="validate()"/>
+     <br><br> -->
+
+     <input type="text" id="inp1"/> 
+     <b id="fnm_err"></b>
+     <br><br>
+
+    Lastname :
+     <input type="text" id="inp2"/>
+    
+     <br><br>
+
+    <!-- <input type="submit" value="Validate" onclick="validate()"> -->
+
+    <input type="submit" value="Validate">
+    </form>
+
+    <script>
+        var fname = document.getElementById('inp1');
+        var lname = document.getElementById('inp2');
+        var fErr = document.getElementById('fnm_err');
+       
+
+        // fname.value 
+
+        // x= 1 
+        // fname.value =""
+
+       function validate()
+       {
+        if(fname.value == '')
+        {
+             alert("Required..!");
+             return false;
+            // document.write("required...!");
+        }
+
+        if(lname.value == '')
+        {
+            alert("lname Required..!")
+        }
+       }
+
+       
+
+       
+
+
+
+    </script>
+    
+</body>
+</html>
