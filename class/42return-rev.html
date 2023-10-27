@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form >
+    Firstname: 
+    <input type="text" id="inp1" onkeyup="return Validate()">
+    <span id="fnmErr"></span><br>
+ 
+    <!-- Lastname:
+    <input type="text" id="inp2">
+    <span id="lnmErr"></span><br> -->
+ 
+    <!-- <input type="submit" value="Validate" onclick="return Validate()"> -->
+</form>
+
+    <script>
+
+        inp1_tag = document.getElementById('inp1');
+        inp2_tag = document.getElementById('inp2');
+
+        sp1_tag = document.getElementById('fnmErr');
+        sp2_tag = document.getElementById('lnmErr');
+
+        // fnm_ex = /^[a-zA-Z]+$/
+
+        fnm_ex = /^[a-zA-Z]{2,8}$/
+        
+        function Validate()
+        {
+            if(inp1_tag.value == "")
+            {
+                sp1_tag.innerHTML ="* Required..!"
+                sp1_tag.style.color ="red"
+                inp1_tag.style.border="2px solid red"
+                // alert("Required..!")
+                return false ;
+
+            }
+
+            else if(!fnm_ex.test(inp1_tag.value))
+            {
+                sp1_tag.innerHTML ="* min 2 max 8 Letters only...!";
+                return false ;
+            }
+
+            else {
+                sp1_tag.innerHTML =""
+                inp1_tag.style.border="2px solid green"
+                return false
+            }
+
+           
+        }
+      
+    </script>
+    
+</body>
+</html>
