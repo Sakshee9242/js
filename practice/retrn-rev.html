@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Firstname : <input type="text" id="inp1" onkeyup=" return Validate()" >
+    <span id="fnmErr"></span><br>
+    <!-- Lastname : <input type="text" id="inp2">
+    <span id="lnmErr"></span><br>
+    <input type="submit" value="Validate" onclick="Validate(), Validate1()"> -->
+
+    <script>
+        var fnm = document.getElementById("inp1");
+        var lnm = document.getElementById("inp2");
+        var sp = document.getElementById("fnmErr");
+        var sp1 = document.getElementById("lnmErr");
+
+        // /^[a-zA-Z]{2,8}$/
+  fnm_ex = /^[a-zA-Z]{2,8}$/;
+
+  function Validate(){
+    if(fnm.value ==""){
+        sp.innerHTML = "Required....!"
+        sp.style.color = "blue"
+        fnm.style.border = "2px solid blue"
+        return false
+    }
+    else if(!fnm_ex.test(fnm.value)){
+        sp.innerHTML = "*min 2 max 8 letter only...!"
+        return false ;
+    }
+    else{
+        sp.innerHTML = ""
+        sp.style.color = "grey"
+        fnm.style.border = "2px solid grey"
+    }
+  }
+
+    // function Validate(){
+    //     if(fnm.value==""){
+    //         alert("Required..")
+    //    sp.innerHTML = "Required...!"
+    //    sp.style.color = "red"
+    //    fnm.style.border = "2px solid red"
+    //     }
+    //     else{
+    //         sp.innerHTML = ""
+    //    sp.style.color = "green"
+    //    fnm.style.border = "2px solid green" 
+    //     }
+    // }
+    // function Validate1(){
+    //     if(lnm.value ==""){
+    //         alert("required")
+    //         sp1.innerHTML= "required...!"
+    //         sp1.style.color = "blue"
+    //         lnm.style.border = " 2px solid blue"
+    //     }
+    //     else{
+    //         sp1.innerHTML = ""
+    //         sp1.style.color = "grey"
+    //         lnm.style.border = " 2px solid grey"
+    //     }
+    // }
+
+    </script>
+ 
+</body>
+</html>
