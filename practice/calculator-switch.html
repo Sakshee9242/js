@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number"  id="inp1">
+    <br>
+    <br>
+    <input type="number" id="inp2">
+    <br>
+    <br>
+    <input type="" id="sel1" >enteroperator
+    <!-- <select id="sel1"><option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select> -->
+<button onclick="Add()">On click</button>
+   
+    <span id="user"></span>
+
+    <script>
+        let num1 = document.getElementById("inp1");
+        let num2 = document.getElementById("inp2");
+        let sel1 = document.getElementById("sel1");
+        let user = document.getElementById("user")
+
+        function Add(){
+        switch (sel1.value) {
+            case "+": user.innerHTML = parseFloat(num1.value) + parseFloat(num2.value);
+            break;
+            case "-": user.innerHTML = parseFloat(num1.value) - parseFloat(num2.value);
+            break;
+            case "*": user.innerHTML = parseFloat(num1.value) * parseFloat(num2.value);
+            break;
+            case "/": user.innerHTML = parseFloat(num1.value) / parseFloat(num2.value);             
+                break;
+        
+            default:
+                user.innerHTML = "please enter valid vlue"
+                break;
+        }
+        }
+    </script>
+
+    
+</body>
+</html>

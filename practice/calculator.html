@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  id="inp1">
+    <br>
+    <br>
+    <input type="text" id="inp2">
+    <br>
+    <br>
+    <button onclick="Add()">+</button>
+    <button onclick="decrease()">-</button>
+    <button onclick="multiply()">*</button>
+    <button onclick="devide()">/</button>
+    <span id="user"></span>
+    <script>
+        var num1 = document.getElementById("inp1");
+        var num2 = document.getElementById("inp2");
+
+        function Add(){
+           let a = parseFloat(num1.value) +parseFloat(num2.value);
+        //    console.log(typeof a,a)
+        document.getElementById("user").innerHTML = a
+           
+        //    string to convert a number is 3 ways: number, parseInt, parseFloat
+
+        // prseInt : decimal value ignore 
+        // number/parseFloat : decimal values showed 
+        }
+        function decrease(){
+            let a = parseFloat(num1.value) - parseFloat(num2.value);
+            document.getElementById("user").innerHTML = a
+        }
+        function multiply(){
+            let a = parseFloat(num1.value) * parseFloat(num2.value);
+            document.getElementById("user").innerHTML = a
+        }
+        function devide(){
+            let a = parseFloat(num1.value) / parseFloat(num2.value);
+            document.getElementById("user").innerHTML = a
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1 id="h1" onclick="TestPara (h1)">1</h1>
+    <h1 id="h2" onclick="TestPara (h2)">1</h1>
+    <h1 id="h3" onclick="TestPara (h3)">1</h1>
+    <h1 id="h4" onclick="TestPara (h4)">1</h1>
+    <h1 id="h5" onclick="TestPara (h5)">1</h1>
+
+    <input id="i1" onblur="TestPara (i1)">
+    <input id="i2" onblur="TestPara (i2)">
+    <input id="i3" onblur="TestPara (i3)">
+    <input id="i4" onblur="TestPara (i4)">
+    <input id="i5" onblur="TestPara (i5)">
+
+    <script>
+        function TestPara (x)
+        {
+           
+
+             if(x.innerHTML=== "1")
+            {
+                
+                alert("heading alert")
+            }
+
+            
+            if(x.value=== "")
+            {
+                
+                alert("input alert")
+            }
+
+            console.log(x);
+            // console.log(x.innerHTML)
+            console.log(x.value)
+        }
+        
+        
+
+    </script>
+
+    
+</body>
+</html>
