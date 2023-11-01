@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1 id="h1">hello</h1>
+     <h1 id="h2">hello</h1>
+     <h1 class="c1">hello</h1>
+    
+    <h2 class="s1">Hello</h2>
+    <h2 class="s1">Hello</h2>
+    <h2 class="s1">Hello</h2>
+    <h2 class="s1">Hello</h2>
+    <h2 class="s1">Hello</h2>
+
+    <p>para</p>
+    <p>para</p>
+    <p>para</p>
+    <p>para</p>
+    <p>para</p>
+
+   <div name="sak"></div>
+   <div name="sak"></div>
+   <div name="sak"></div>
+   <div name="sak"></div>
+
+    <script>
+       h1 = document.getElementById("h1");
+        console.log(h1);
+        h1 = document.querySelector(".c1");
+        console.log(h1);
+        h1 = document.querySelector("h2");
+        console.log(h1);
+        h2 = document.getElementsByClassName("s1");
+        console.log(h2);
+
+        p = document.getElementsByTagName("p");
+        console.log(p);
+
+        div = document.getElementsByName("sak");
+        console.log(div)
+
+    </script>
+</body>
+</html>

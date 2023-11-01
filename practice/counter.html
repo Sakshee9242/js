@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sakshee"></div>
+    <script>
+        x=0;
+  function counter(){
+    if(x<=300){
+        document.getElementById("sakshee").innerHTML = (x);
+        x++;
+        // setTimeout(counter)
+        // setInterval(counter, 4000)
+    }
+    // setTimeout(counter)
+    // setInterval(counter)
+  
+}
+  counter()
+//   setInterval(counter)
+setTimeout(counter,1000)
+
+function counter1(){
+    if(x<=200){
+        document.getElementById('sakshee').innerHTML = (x)
+        x++;
+        // setTimeout(counter1)
+        // setInterval(counter1)
+    // }setTimeout(counter1)
+    }
+            // setInterval(counter1)
+}
+counter1()
+setInterval(counter1, 1000)
+// setTimeout(counter1, 1000)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hitesh"></h1>
+
+    <!-- setTimeout == inside function as recurive==> call the function first
+    setInterval == outside function as recurive==>need not to call the function  -->
+
+    <script>
+             x=0;
+
+            function counter()
+            {
+                if(x<=653)
+                {
+                    document.getElementById('hitesh').innerHTML = (x);//0
+                    x++;//1
+                    // counter()
+                    setTimeout(counter)
+                   
+                   
+                    
+                }
+                // setTimeout(counter)
+                
+            }
+
+         counter()
+            //  setInterval(counter,1000)
+            // setTimeout(counter,1000)
+
+    </script>
+    
+</body>
+</html>

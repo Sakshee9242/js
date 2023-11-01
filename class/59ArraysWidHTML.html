@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .xyz 
+        {
+            height: 100px;
+            width: 100px;
+        color: #fff;
+        background: #000;
+        }
+    </style>
+</head>
+<body>
+
+        <h1 onclick="ApplyCSS()">Hello</h1>
+        <h1>Hello</h1>    
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+
+
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+
+        <script>
+           function ApplyCSS()
+           {
+            h1_arr = document.getElementsByTagName('h1');
+
+//  console.log(h1_arr)           
+
+  for(x=0;x<h1_arr.length;x++)
+  {
+      // h1_arr[x].style.color ="#fff"
+      // h1_arr[x].style.height ="100px"
+      // h1_arr[x].style.width ="200px"
+      // h1_arr[x].style.background ="#000"
+
+      // h1_arr[x].classList.add('xyz')
+
+      h1_arr[x].className ="xyz"
+  }
+           }
+        </script>
+    
+</body>
+</html>

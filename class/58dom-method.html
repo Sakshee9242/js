@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="h1">heading 1</h1>
+
+    <h2 class="h1"> heading 2</h2>
+    <h2 class="h1"> heading 2</h2>
+    <h2 class="h1"> heading 2</h2>
+    <h2 class="h1"> heading 2</h2>
+
+    <span id="sp">sp 1</span>
+    <span id="sp">sp 1</span>
+    <span id="sp">sp 1</span>
+    <span id="sp">sp 1</span>
+
+    <h3>Heading 3</h3>
+    <h3>Heading 3</h3>
+    <h3>Heading 3</h3>
+    <h3>Heading 3</h3>
+
+    <p name="para">para 1</p>
+    <p name="para">para 1</p>
+    <p name="para">para 1</p>
+    <p>para 1</p>
+    <p>para 1</p>
+
+    <b class="c1">BOLD CLASS</b>
+    <b id="c1">BOLD ID</b>
+
+    <script>
+
+        p = document.querySelector('.c1')
+        console.log(p)
+
+        q = document.querySelector('#c1')
+        console.log(q)
+
+        getClass =  document.querySelectorAll(".h1")
+        console.log(getClass)
+
+
+        getId =  document.querySelectorAll("#sp")
+        console.log(getId)
+
+        x= document.getElementById('h1');
+        console.log(x)
+
+        y = document.getElementsByClassName('h1');
+        console.log(y)
+
+        z = document.getElementsByTagName('h3');
+        console.log(z)
+
+        a = document.getElementsByName('para')
+        console.log(a)
+
+    </script>
+
+</body>
+</html>
