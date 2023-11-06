@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 class="x" id="x" name="x"> HEllo123 </h1>
+    <h1 class="x" id="x" name="x"> HEllo </h1>
+    <h1 class="x" id="x" name="x"> HEllo </h1>
+    <h1 class="x" id="x" name="x"> HEllo </h1>
+    <h1 class="x" id="x" name="x"> HEllo </h1>
+
+    <script>
+    //   a =  document.getElementById('x');
+    //   b =  document.querySelector('#x');
+    //   c =   document.querySelector('.x');
+
+    //   console.log(a)
+    //   console.log(b)
+    //   console.log(c)
+
+     x_1 = document.getElementsByName('x')
+    // console.log(x_1)
+    
+
+    for(xyz=0;xyz<x_1.length;xyz++)
+    {
+        // x_1[xyz].style.color ="green"
+
+        if(xyz%2 == 0)
+        {
+            x_1[xyz].style.color ="green"
+        }
+        else 
+        {
+            x_1[xyz].style.color ="red"
+        }
+    }
+    </script>
+    
+</body>
+</html>

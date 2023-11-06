@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+    FirstName: <input type="text" id="fnm" onblur=" return Validate(fnm,sp)">
+    <span id="sp"></span>
+    <br>
+    LastName: <input type="text" id="lnm" onblur=" return Validate(lnm,sp1)">
+    <span id="sp1"></span>
+     <br>
+    <input type="submit">
+</form>
+
+    <script>
+        document.getElementById("fnm")
+        document.getElementById("lnm")
+        fnm_ex = /[a-zA-z]+/
+        lnm_ex = /[a-zA-z]+/
+
+        function Validate(x,y){
+            console.log(x)
+            console.log(y)
+
+            if(x.value ==""){
+                y.innerHTML = "Required....!"
+                y.style.color = "red"
+                return false
+            }
+            else if(!fnm_ex.test,!lnm_ex.test(x.value)){
+                y.innerHTML = "please type a valid letters"
+                y.style.color = "green"
+                return false
+            }
+            else{
+                y.innerHTML = ""
+                return false
+            }
+        }
+
+
+    </script>
+</body>
+</html>

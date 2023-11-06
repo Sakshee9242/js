@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Price : <b id="price">200 </b>Rs.
+
+    <select id="quantity" onchange="GetPrice()">
+        <option hidden>--- Select Quantity ---</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+    </select>
+
+    <b id="res"></b>
+
+    <script>
+        p = document.getElementById('price')
+        q = document.getElementById('quantity')
+        output = document.getElementById('res')
+       
+        // console.log(p)
+        //  console.log(p.innerHTML);//200
+
+        // console.log(q)
+        //  console.log(q.value)//1
+
+        //  console.log(p.innerHTML*q.value)
+
+       function GetPrice()
+       {
+        output.innerHTML = p.innerHTML*q.value
+       }
+    </script>
+    
+</body>
+</html>

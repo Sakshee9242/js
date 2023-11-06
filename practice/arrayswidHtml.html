@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .xyz{
+            line-height: 100px;
+            text-align: center;
+            height: 100px;
+            width: 100px;
+            background: black;
+            color: red;
+            font-size: 55px;
+        }
+    </style>
+</head>
+<body>
+     <h1>Hello</h1>
+     <h1>Hello</h1>
+     <h1>Hello</h1>
+     <h1>Hello</h1>
+     <h1>Hello</h1>
+     <h1>Hello</h1>
+     <h1>Hello</h1>
+     <h1>Hello</h1>
+
+     <script>
+        var h1_arr = document.getElementsByTagName("h1")
+
+        console.log(h1_arr)
+
+        for(x=0;x<h1_arr.length;x++){
+
+            h1_arr[x].className = "xyz"
+            h1_arr[x].style.color = "blue"
+            h1_arr[x].style.background = "red"
+            h1_arr[x].style.height ="100px"
+      h1_arr[x].style.width ="200px"
+        }
+     </script>
+</body>
+</html>

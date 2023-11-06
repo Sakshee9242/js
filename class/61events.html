@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onscroll="ScrollEffect()">
+    
+    <h4 class="x" onclick="Click()">click</h4>
+    <h4 ondblclick="dblClick()">double click</h4>
+    <h4 >move</h4>
+    <h4 onmouseenter="MouseEnter()" onmouseleave="MouseLeave()">enter - leave</h4>
+
+
+    <h4>scroll ==> CHECK BODY TAG</h4>
+    <h4>load</h4>
+    <h4>unload</h4>
+    <h4>resize</h4>
+
+    <!-- <input onkeypress="KeyPressTest()"> -->
+
+    <!-- <input onkeydown="KeyPressTest()"> -->
+
+    <!-- <input onkeyup="KeyPressTest()"> -->
+
+    <!-- <input onblur="KeyPressTest()"> -->
+
+    <input onfocus="KeyPressTest()">
+    <h4 class="k">keypress</h4>
+    <h4>keydown</h4>
+    <h4>keyup</h4>
+
+    <h4>submit</h4>
+    <h4>blur</h4>
+    <h4>change</h4>
+    <h4>focus</h4>
+
+    <script>
+        h4_tag = document.querySelector('.x');
+        h41_tag = document.querySelector('.k');
+
+        function Click()
+        {
+            h4_tag.innerHTML ="CLICKED...!"
+        }
+
+
+        function dblClick()
+        {
+            h4_tag.innerHTML ="Double CLICKED...!"
+        }
+
+
+        function MouseEnter()
+        {
+            h4_tag.innerHTML ="Mouse Enter...!"
+        }
+
+        function MouseLeave()
+        {
+            h4_tag.innerHTML ="Mouse Leave...!"
+        }
+
+        function ScrollEffect()
+        {
+            h4_tag.innerHTML ="Scroll...!"
+        }
+
+        function KeyPressTest()
+        {
+            h41_tag.innerHTML ="Pressed..!"
+        }
+
+       
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form>
+    Firstname: 
+    <input type="text" id="fnm" onblur="Validate(fnm,fnmErr)"/>
+    <b id=fnmErr></b>
+    <br>
+
+    Lastname: 
+    <input type="text" id="lnm" onblur=" Validate(lnm,lnmErr)"/>
+    <b id="lnmErr"></b>
+    <br>
+
+    <input type="submit">
+</form>
+
+<script>
+   
+//    fnm_exp = /[a-zA-Z]+/
+
+fnm_exp = /^[a-zA-Z]+$/
+
+   function Validate(x,y)
+   {
+
+    console.log(x)
+    console.log(y)
+
+    if(x.value == "")
+    {
+       y.innerHTML = "*Required..!";
+        y.style.color ="red"
+       
+    }
+
+    else if(!fnm_exp.test(x.value))
+    {
+        y.innerHTML = "Naam ma NUMBER kya lakhe che topa..!";
+        y.style.color ="red"
+    }
+   else
+    {
+        y.innerHTML = "";
+       
+    }
+
+    
+    // else {
+    //     bFnm.innerHTML = "";
+    // }
+   }
+
+   
+
+</script>
+    
+</body>
+</html>
