@@ -1,11 +1,28 @@
-<!DOCTYPE html>
+|<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        img 
+        img{
+            /* width: 100%; */
+            /* object-fit: contain; */
+        }
+        .xyz{
+            animation: slide;
+            animation: slide 1s;
+        }
+        @keyframes slide{
+            0%{transform: translate(-200%,0) scale(1); opacity: 0;}
+           100%{transform: translate(0%,0) scale(1.2); opacity: 1;}
+        }
+        div 
+        {
+            overflow: hidden;
+        }
+
+        /* img 
         {
             width: 100%;
             object-fit: contain;
@@ -25,26 +42,25 @@
         div 
         {
             overflow: hidden;
-        }
+        } */
     </style>
 </head>
 <body>
-  <div>
-    <img src="i1.jpg" alt="" height="400px">
-    <img src="i2.jpg" alt="" height="400px">
-    <img src="i3.jpg" alt="" height="400px">
-    <img src="i4.jpg" alt="" height="400px">
-  </div>
-  <h1>kfh</h1>
-
+    <div>
+        <img src="gallery-1.jpeg" alt="" height="400px">
+        <img src="gallery-2.jpeg" alt="" height="400px">
+        <img src="gallery-3.jpeg" alt="" height="400px">
+        <img src="gallery-4.jpeg" alt="" height="400px">
+    </div>
+    <h1>hey</h1>
     <script>
-        img_arr = document.getElementsByTagName('img')
-        // console.log(img_arr);
-
+        img_arr = document.getElementsByTagName("img")
+        // console.log(img_arr)
         // img_arr[0].style.display = "none"
         // img_arr[1].style.display = "none"
         // img_arr[2].style.display = "none"
         // img_arr[3].style.display = "none"
+      
         index =0;
        function Slider()
        {
@@ -70,11 +86,6 @@
 
        Slider()
 
-
-
     </script>
-
-
-    
 </body>
 </html>
