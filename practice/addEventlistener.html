@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hello">Heading</h1>
+    <button id="b1">Apply Color</button>
+    <script>
+        var h_tag =  document.getElementById("hello")
+        var b_tag =  document.getElementById("b1")
+
+       /* b_tag.addEventListener("mouseenter", ApplyColor )
+        function ApplyColor(){
+            h_tag.style.color = "darkred"
+        }*/
+
+       /* b_tag.addEventListener("dblclick", ApplyColor  )
+        function ApplyColor(){
+            h_tag.style.color = "green"
+        } */
+
+      /*  b_tag.addEventListener("dblclick", function ()
+        {
+            h_tag.style.color = "blue"
+          })*/
+
+          window.addEventListener("click", ()=>
+          {
+            h_tag.style.background = "darkblue"
+          })
+    </script>
+</body>
+</html>
