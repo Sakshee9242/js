@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="h">Apple 1</h1>
+    
+    <button id="b1">Apply Color</button>
+    <script>
+        
+        var h1_tag = document.getElementById('h');
+        var btn_tag = document.getElementById('b1');
+
+//  varName.addEventListener("event",functionName)
+
+// btn_tag.addEventListener("mouseenter",ApplyColor)
+
+//         function ApplyColor()
+//         {
+//             h1_tag.style.color ="darkred" 
+//         }
+
+// btn_tag.addEventListener("dblclick", function ApplyColor()
+//         {
+//             h1_tag.style.color ="darkred" 
+//         })
+
+// Anonymous Function
+// btn_tag.addEventListener("dblclick", function ()
+//         {
+//             h1_tag.style.color ="darkred" 
+//         })
+
+// btn_tag.addEventListener("dblclick",  ()=>
+//         {
+//             h1_tag.style.color ="darkred" 
+//         })
+
+window.addEventListener("click",  ()=>
+        {
+            h1_tag.style.color ="darkred" 
+        })
+
+       
+    </script>
+    
+</body>
+</html>
