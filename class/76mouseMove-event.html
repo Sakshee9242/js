@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1
+        {
+            height: 20px;
+            width: 20px;
+            background: blue;
+          
+            position: absolute;
+            top:-10px;
+            left:-10px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div id="d1"></div>
+
+    <a href="xyz.html">LInk</a>
+
+    <button onclick="testClick()">Forward</button>
+
+    <script>
+        
+        // function testClick()
+        // {
+        //     window.location = "xyz.html"
+        // }
+
+        function testClick()
+        {
+            window.history.forward();
+        }
+
+        
+
+document.write(navigator.appCodeName)
+        // document.write(window.innerWidth)
+
+        myDiv = document.getElementById('d1')
+        //xyz =  {
+        //     name:"sdf",
+        //     age:234
+        // }
+      
+
+        function TestMoveEvent(e)
+        {
+            console.log(e)
+            // x= e.clientX;
+            // y= e.clientY; 
+
+            
+
+            // x= e.screenX;
+            // y= e.screenY; 
+
+
+            x= e.pageX;
+            y= e.pageY; 
+            
+            myDiv.style.marginLeft = x +"px";
+            myDiv.style.marginTop = y+"px";
+
+        }
+            
+        // window.addEventListener("mousemove",TestMoveEvent)
+            
+            
+
+    </script>
+
+
+    
+</body>
+</html>

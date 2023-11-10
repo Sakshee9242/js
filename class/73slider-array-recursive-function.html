@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img 
+        {
+            height: 500px;
+            width: 100%;
+        }
+        /* div 
+        {
+
+            overflow: hidden;
+        }
+
+        .xyz 
+        {
+            animation: test 1s;
+        }
+
+        @keyframes test 
+        {
+            0%{transform: scale(1) translate(-100%,0);}
+            100%{transform: scale(2) translate(0,0);}
+        } */
+    </style>
+</head>
+<body>
+
+   <div>
+    <img src="i1.jpg" alt="">
+    <img src="i2.jpg" alt="">
+    <img src="i3.jpg" alt="">
+    <img src="i4.jpg" alt="">
+   </div>
+
+    <h1>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, provident quos similique asperiores magni ducimus illum placeat sunt, a consequuntur impedit excepturi? Eligendi, minima? Architecto minus totam vitae quaerat necessitatibus.\
+    </h1>
+
+    <script>
+        img_arr = document.getElementsByTagName('img');
+
+        // console.log(img_arr);
+
+        // img_arr[0].style.display = "none"
+        // img_arr[1].style.display = "none"
+        // img_arr[2].style.display = "none"
+        // img_arr[3].style.display = "none"
+    let index =0 ;
+
+       function slider()
+       {
+        
+        for(i=0;i<img_arr.length;i++)
+        {
+            img_arr[i].style.display = "none"
+        }
+
+        img_arr[index].style.display = "block";
+        img_arr[index].classList.add('xyz')
+
+        index++;//4
+        if(index==img_arr.length)
+        {
+            index=0;
+        }
+
+        setTimeout(" slider()",1000)
+       }
+
+       slider()
+
+
+
+    </script>
+
+
+    
+</body>
+</html>

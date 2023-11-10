@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div 
+        {
+            position: relative;
+        }
+        img 
+        {
+            height: 400px;
+            width: 100%;
+            
+        }
+        button 
+        {
+            position: absolute;
+            top:50%;
+            right:10%;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 12px;
+            background: transparent;
+            box-shadow: 0 0 20px #fff inset;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: cursive;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <img src="i1.jpg" alt="" id="i1">
+        <!-- <img src="i2.jpg" alt="">
+        <img src="i3.jpg" alt="">
+        <img src="i4.jpg" alt=""> -->
+        <button onclick="slider()"> > </button>
+    </div>
+
+     
+    
+        <h1>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, provident quos similique asperiores magni ducimus illum placeat sunt, a consequuntur impedit excepturi? Eligendi, minima? Architecto minus totam vitae quaerat necessitatibus.\
+        </h1>
+
+        <script>
+            img1 = document.querySelector('#i1');
+            console.log(img1)
+            console.log(img1.src);//http://127.0.0.1:5500/i1.jpg
+
+           function slider()
+           {
+                if( img1.src.match("i1.jpg"))
+                {
+                    img1.src ="i2.jpg"
+                }
+
+                else if(img1.src.match("i2.jpg"))
+                {
+                    img1.src ="i3.jpg"
+                }
+
+                else if(img1.src.match("i3.jpg"))
+                {
+                    img1.src ="i4.jpg"
+                }
+
+                else 
+                {
+                    img1.src ="i1.jpg"
+                }
+
+                // setTimeout("slider()",1000)
+           }
+
+        //    slider()
+
+
+        </script>
+    
+</body>
+</html>
