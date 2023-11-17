@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jaydeep.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> -->
+</head>
+<body>
+    
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+         Suscipit debitis temporibus aliquid rem repellat iure ducimus fuga voluptatibus eius a,
+         eveniet sed unde provident illo ab maiores accusamus commodi exercitationem!
+    </p>
+
+    <button id="b1">hide</button>
+    <button id="b2">show</button>
+    <button id="b3">hide-show</button>
+
+    <script>
+       $(document).ready(function(){
+
+        $("#b1").click(function(){
+            $('p').hide();
+        })
+
+        $('#b2').mouseenter(()=>{
+            $('p').show()
+        })
+
+        // $('button').click(function(){
+        //     $(this).hide();
+        // })
+
+        $('#b3').dblclick(()=>{
+            $('p').toggle();
+        })
+
+        $(document).click(function(){
+            $('p').hide();  
+        })
+
+
+       })
+
+
+
+    </script>
+</body>
+</html>

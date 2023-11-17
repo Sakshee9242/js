@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jaydeep.js"></script>
+    <style>
+        .que,.ans 
+        {
+            background: lightblue;
+            border: 2px solid;
+        }
+        .ans 
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="que">Question??</div>
+    <div class="ans">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+         Laborum, facere omnis aliquid soluta laboriosam mollitia 
+         laudantium quaerat accusantium dicta veritatis 
+        perferendis molestias ducimus est dolore placeat animi illum temporibus dolor!
+    </div>
+
+    <script>
+       
+        $('.que').click(function(){
+            $('.ans').slideToggle(3000);
+        })
+    </script>
+    
+</body>
+</html>

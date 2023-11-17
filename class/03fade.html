@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jaydeep.js"></script>
+</head>
+<body>
+
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+         Suscipit debitis temporibus aliquid rem repellat iure ducimus fuga voluptatibus eius a,
+         eveniet sed unde provident illo ab maiores accusamus commodi exercitationem!
+    </p>
+
+    <button id="b1">hide/fadeOut</button>
+    <button id="b2">show/FadeIn</button>
+    <button id="b3">FadeToggle</button>
+
+    <script>
+
+        $('#b1').click(function(){
+            $('p').hide(function(){
+                // alert("Hidden...!")
+                // document.write("hidden...!")
+            })
+        })
+
+        $('#b1').click(function(){
+            $('p').fadeOut(1000);
+            // $('p').hide("slow");
+        })
+
+        // $('#b2').click(function(){
+        //     $('p').fadeIn(1000);
+        // })
+
+        $('#b2').click(function(){
+            $('p').fadeTo("slow",0.4);
+        })
+
+        $('#b3').click(function(){
+            $('p').fadeToggle(1000);
+        })
+
+    </script>
+    
+</body>
+</html>
