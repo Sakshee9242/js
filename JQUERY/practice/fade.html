@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam voluptas minus eos magni odit rerum vitae eius porro dolor, labore temporibus odio quisquam nulla veritatis excepturi exercitationem voluptatibus laboriosam debitis libero sed fugit possimus. Tempore, nemo ipsum saepe fugit officia odio, nisi incidunt debitis obcaecati ut nesciunt! Quaerat, fugiat perspiciatis!</p>
+
+    <button id="b1">|Hide/fadeOut</button>
+    <button id="b2">Show/FadeIn</button>
+    <button id="b3">FadeToggle</button>
+   <script>
+      $('#b1').click(function(){
+        $('p').hide(function(){
+            alert("hidden....!!")
+        })
+      })
+      $('#b1').click(function (){
+        $('p').fadeOut(1000)
+      })
+      $('#b2').click(function (){
+        $('p').fadeIn(1000)
+      })
+      $('#b3').click(function (){
+        $('p').fadeToggle(1000)
+      })
+      
+      $('#b2').click(function(){
+            $('p').fadeTo("slow",0.4);
+        })
+   </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="sakshee.js"></script>
+    <style>
+        #p1,#p2{
+            background: red;
+            color: aliceblue;
+        }
+        #p2{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+      <p id="p1">Question</p>
+      <p id="p2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, officia accusamus quos illum molestiae esse ratione totam error explicabo, exercitationem quia quas nulla cupiditate! Minima ratione nam officiis iste reprehenderit, impedit libero quis nulla! Quam quis sapiente voluptas ipsum. Quasi aliquam possimus necessitatibus, eaque corrupti earum voluptatibus provident quae pariatur.</p>
+
+      <script>
+         $('#p1').click(()=>{
+            $('#p2').slideToggle(1000)
+         })
+      </script>
+</body>
+</html>

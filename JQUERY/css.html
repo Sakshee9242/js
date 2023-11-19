@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="sakshee.js"></script>
+    <style>
+        .xyz{
+            height: 100px;
+            width: 100px;
+            background: blanchedalmond;
+            font-size: larger;
+            color: black;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="xyz">
+        HEllo
+    </div>
+    <button>CSS</button>
+
+    <script>
+        //  $('div').css('color', '#ffffff');
+        //  $('div').css('height', '500px');
+        //  $('div').css('width', '500px');
+
+     // $('div').addClass('xyz');
+     // $('div').removeClass('xyz');
+    //   $('div').toggleClass('xyz');
+    $('div').css({color:"red", backgroundColor:"lightblue"})
+
+    $('button').click(function(){
+        $('div').animate({'margin-left': 200})
+        $('div').css({'margin-left': 200})
+    })
+
+    </script>
+</body>
+</html>
