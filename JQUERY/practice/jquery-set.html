@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <p id="text1">This is para1</p>
+    <p id="text2"><b>this is para2</b></p>
+    <input id="text3" type="text3" value="Sakshee">
+    <button id="b1">Set text</button>
+    <button id="b2">set html</button>
+    <button id="b3">set value</button>
+    <script>
+        $('#b1').click(function(){
+            $('#text1').text('Hello sakshee')
+            alert('Text:' + $("#text1").text())
+        })
+        $('#b2').click(function(){
+            $('#text2').html('<b>Hello sakshee</b>')
+        })
+        $('#b3').click(function(){
+            $('#text3').val('Hello sakshee')
+        })
+
+    </script>
+</body>
+</html>

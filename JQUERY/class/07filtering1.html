@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        /* h1:first-child 
+        {
+            color:red;
+        }
+
+        h1:last-child
+        {
+            color:green
+        } */
+
+        /* p 
+        {
+            color:cornflowerblue;
+        }
+        p:nth-child(1),p:nth-child(3)
+        {
+            color: red;
+        } */
+      
+    </style>
+</head>
+<body>
+
+    <p>para 1</p>
+  
+    <p>para 2</p>
+    
+    <p>para 3</p>
+    
+    <p>para 4</p>
+
+  <div>
+    <h1>Hello 123</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+  </div>
+
+  
+  <div>
+    <h1>Hello 123</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+  </div>
+
+
+
+  <script>
+
+    x=[10,11,12,31,41];
+
+
+    for(i=0;i<5;i++)
+    {
+        if(x[i]%2 == 0)
+        {
+            document.write(x[i])
+        }
+        
+    }
+
+   
+
+    // $('p').eq(0).css("color","blue")
+
+    // $('p').eq(2).css("color","blue")
+
+    for(i=0;i<4;i++)
+    {
+       if(i%2 ==0 )
+       {
+        $('p').eq(i).css("color","blue")
+       }
+       else 
+       {
+        $('p').eq(i).css("color","red")
+       }
+    }
+
+
+    // $('div').first().css("color","red")
+
+    $('h1').first().css("color","red")
+
+    $('h1').last().css("color","green")
+
+    $('h1').eq(2).css("color","blue")
+  </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        /* .gp,.papa,.mother,span 
+        {
+            border: 3px solid;
+        } */
+
+        .main *
+        {
+            border: 3px solid;
+            padding: 35px;
+            display: block;
+        }
+        /* .gp 
+        {
+            border: 3px solid brown;
+            background: gray;
+        } */
+    </style>
+</head>
+<body>
+
+    
+
+    <div class="main">
+        <div class="gp"> GrandFather
+            <ul class="papa"> Father
+                <li class="mother"> Mother
+                    <span>CHILD 1</span>
+
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+
+        // $('span').parents().css("border","3px solid red")
+
+        // $('span').parent().css("border","3px solid blue")
+        
+        // $('span').parentsUntil('.gp').css("border","3px solid red")
+
+        // $('.gp').children().css("border","3px solid pink")
+
+        $('.gp').children().css("background","pink")
+        $('.gp').find('li').css("background","lightblue")
+        $('.gp').find('span').css("background","lightcoral")
+    </script>
+    
+</body>
+</html>
