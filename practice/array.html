@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button onclick="changecolor()">Change colour</button>
+    <button onclick="autostart()">
+        Continue
+    </button>
+    <button onclick="clearInt()">
+      stop
+    </button>
+
+    <script>
+        let colors = ["Red", "blue", "green", "yellow","orange", "pink", "black", "purple", "teal", "skyblue"]
+        let box = document.querySelector("div");
+        let colorIndex = 0;
+        box.style.backgroundColor = colors[colorIndex]
+        function changecolor(){
+              if(colorIndex < colors.length){
+                colorIndex++;
+                if(colorIndex == 4){
+                    if(confirm('do you want to continue') == true){
+                        colorIndex + 1;
+                    }
+                   else{
+                      colorIndex = 0;
+                   }
+                } else if(colorIndex == colors.length){
+                    alert('slides are end')
+                }
+              }else{
+                colorIndex = 0
+              }
+              box.style.backgroundColor = colors[colorIndex];
+        }
+        let timer;
+        function autostart(){
+            timer = setInterval(() =>{
+                if(colorIndex < colors.length){
+                    colorIndex++
+                } else{
+                    colorIndex = 0
+                }
+                box.style.backgroundColor = colors[colorIndex]
+                
+            },1000)
+           
+        }
+        function clearInt(){
+            clearInterval(timer)
+        }
+    </script>
+</body>
+</html>
