@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // var/let/const objName = { index:value,index:value,...}
+
+        // objName.index
+        //objName["index"]
+
+        arrObj = [
+            "Darshan",
+            {Address :{"city":"Ahd"}}
+            ]
+
+            // document.write(arrObj[1]["Address"]['city'] + "<br><br>")
+
+            document.write(arrObj[1].Address.city + "<br><br>")
+
+
+        const  students = {12:"Hiren","age":23,course:"FrontEnd","xyz":123};
+
+        // document.write(students[12])
+        // document.write(students.age)
+        // document.write(students['course'])
+        // document.write(students.course)
+
+        for(x in students)
+        {
+            // document.write(x);
+            document.write(students[x])
+        }
+
+       
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

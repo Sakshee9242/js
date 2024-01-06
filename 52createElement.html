@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="parent">
+        <p class="child1">child 1</p>
+        <p class="child2">child 2</p>
+        <p class="child3">child 3</p>
+        <!-- <h1>HELLO</h1> -->
+    </div>
+    
+
+    <script>
+
+        // document.write("<h1>Hello </h1>")
+        div_tag = document.querySelector('.parent');
+        p2_tag = document.querySelector('.child2');
+
+       h1_tag = document.createElement('h1');//<h1></h1>
+       h1_txt =  document.createTextNode("hello");// hello
+
+       h1_tag.append(h1_txt);//<h1>hello</h1>
+
+    //    div_tag.append(h1_tag)
+
+    // div_tag.appendChild(h1_tag)
+
+    div_tag.insertBefore(h1_tag,p2_tag)
+
+    </script>
+</body>
+</html>
