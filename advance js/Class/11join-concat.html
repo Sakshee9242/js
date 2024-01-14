@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        arr1 = [1,2,3];
+        arr2 = [3,4,5,6,7,8,9];
+        arr3 = [5,6,7];
+
+        res = arr1.join("%")
+
+        res1 = arr1.concat(arr2,arr3)
+
+        console.log(res)
+    console.log(res1)
+        map1 = arr1.map((v)=>{
+            return (v*v*Math.PI)
+        })
+
+      filter1 =  arr2.filter((v)=>{
+            return(v%2==0)
+        })
+
+      reduce1=   arr3.reduce((c,n)=>{
+            return(c+n)
+        })
+
+        console.log(map1);
+        console.log(filter1);
+        console.log(reduce1);
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

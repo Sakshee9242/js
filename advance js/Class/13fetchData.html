@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- JSON : Javascript Object Notation
+    API : Application Programming Interface 
+
+    // method joining 
+    fetch('path/filename.type')
+    .then(function t(){})
+    .then(()=>{})
+
+-->
+
+    <button id="btn1">Get Text</button>
+    <button id="btn2">Get JSON data</button>
+    <button id="btn3">Get API Data</button>
+
+    <h5 id="op"></h5>
+    
+
+    <script>
+      b1 = document.getElementById("btn1");
+      b2 = document.getElementById("btn2");
+      b3 = document.getElementById("btn3");
+
+      b1.addEventListener("click", GetTExt);
+      b2.addEventListener("click", GetJSON);
+      b3.addEventListener("click", GetAPI);
+
+      function GetTExt() {
+        fetch("textFile.txt")
+          .then((res) => {
+            return res.text();
+          })
+          .then((data) => {
+            // console.log(data);
+            // document.write(data)
+            document.getElementById('op').innerHTML = data
+          });
+      }
+
+      function GetJSON() {
+        fetch("data.json")
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            // console.log(data);
+            document.getElementById('op').innerHTML = 
+            "Name: "+ data.name + "<br>"+ " Age:" +data.age
+          });
+      }
+
+      function GetAPI() {
+        fetch("https://jsonplaceholder.typicode.com/photos")
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            console.log(data);
+            // document.getElementById('op').innerHTML = data;
+
+            h = `<h1>DATA</h1>  <tr>
+                        <td>
+                         url
+                            </td>
+                        </tr>
+                    <tr>`
+            data.map((v)=>{
+
+             
+
+                h = h +`<table>
+
+                   
+                        <td>
+                          <img src="  ${v.url}" height="100px">
+                         
+                            </td>
+                        </tr>
+                    </table>`
+
+
+
+            })
+
+            document.getElementById('op').innerHTML =h
+          
+
+           
+          });
+      }
+    </script>
+  </body>
+</html>
