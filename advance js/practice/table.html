@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn1" onclick="getapi()">GET DATA</button>
+    <h1 id="h1"></h1>
+    <script>
+        document.getElementById(btn1)
+        document.getElementById(h1)
+        function getapi(){
+            fetch("table.json")
+            .then((v)=>{
+                return v.json()
+            })
+            .then((data)=>{
+               // console.log(data)
+               h = `<h1>GET DATA</h1>
+               <table border=1>
+                <tr>
+                    <td>name</td>
+                    <td>age</td>
+                    <td>course</td>`;
+
+            data.map((v)=>{
+                h = h + `
+                        <tr>
+                            <td>
+                                ${v.name}    
+                            </td>
+                            <td>
+                                ${v.age}    
+                            </td>
+                            <td>
+                                ${v.course}    
+                            </td>
+                        </tr>`;
+            })
+            h+='</table>';
+                h1.innerHTML=h;
+            })
+        }
+    </script>
+</body>
+</html>

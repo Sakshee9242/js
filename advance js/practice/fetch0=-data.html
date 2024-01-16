@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr,th,td{
+            border: 3px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <button id="b1">get text</button>
+    <button id="b2">get json data</button>
+    <button id="b3">get api data</button>
+    <h1 id="h1_tag"></h1>
+    <script>
+        btn1 = document.getElementById('b1');
+        btn2 = document.getElementById('b2');
+        btn3 = document.getElementById('b3');
+        h1_t = document.getElementById('h1_tag');
+
+
+        btn1.addEventListener("click",gettext);
+        btn2.addEventListener("click",getjson);
+        btn3.addEventListener("click",getapi);
+
+        function gettext(){
+            fetch("dummy.txt")
+            .then((res)=>{
+                return res.text();
+            })
+            .then((data)=>
+            {
+                h1_t.innerHTML=data;
+            });
+        }
+
+        function getjson(){
+            fetch("dummy.json")
+            .then((res)=>{
+                return res.json();
+            })
+            .then((data)=>
+            {
+                h1_t.innerHTML=data.name;
+            });
+        }
+
+        function getapi(){
+            fetch("https://jsonplaceholder.typicode.com/users")
+            .then((res)=>{
+                return res.json();
+            })
+            .then((data)=>
+            {
+                //  console.log(data)
+                h =`<h1>API Data</h1>
+                <table>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        USERNAME
+                    </th>
+                    <th>
+                        EMAIl
+                    </th>`; 
+                data.map((v)=>{
+                    h = h + `
+                        <tr>
+                            <td>
+                                ${v.id}    
+                            </td>
+                            <td>
+                                ${v.name}    
+                            </td>
+                            <td>
+                                ${v.username}    
+                            </td>
+                            <td>
+                                ${v.email}    
+                            </td>
+                        </tr>`;
+                });
+                h+='</table>';
+                h1_t.innerHTML=h;
+            });
+        }
+    </script>
+</body>
+</html>

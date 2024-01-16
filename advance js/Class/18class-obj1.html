@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        class Bank 
+        {
+            t1 = "123t1";
+            t2 = "123t2";
+            t3 = "123t3";
+
+
+           x = function fun1()
+           {
+            var c=34;
+            document.write("fun1 <br>" +  c)
+           }
+
+           y = function ()
+           {
+            document.write("Anonymous fun <br>")
+           }
+
+          z =  ()=>{
+
+            document.write("Arrow fun<br>")
+           }
+
+           fun2()
+           {
+            document.write("Fun2<br>")
+           }
+
+           static database()
+           {
+            document.write("BANK DBMS")
+           }
+        }
+
+        
+        const obj1 = new Bank;
+        obj1.x();
+        obj1.y();
+        obj1.z();
+        obj1.fun2();
+        // document.write(obj1.t1+"<br>")
+        Bank.database();
+    </script>
+    
+</body>
+</html>

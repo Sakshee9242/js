@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="h"></h1>
+    
+
+    <script>
+
+        fetch('https://jsonplaceholder.typicode.com/comments')
+        .then( (r)=>{return r.json()})
+        .then( (d)=>{
+
+            var heading =`
+            <table border=1>
+                <tr>
+                    <td>id</td>
+
+                    <td>name</td>
+                    <td>Email</td>
+                     <td>body</td>
+                </tr>`;
+            d.map((v)=>{
+
+            //   console.log(v.email)
+
+            heading = heading + `
+                
+               <tr>
+                <td>
+                    ${v.id} 
+               </td> 
+               <td>
+                    ${v.name} 
+               </td> 
+                <td>
+                    ${v.email} 
+               </td> 
+               <td>
+                    ${v.body} 
+               </td> 
+                </tr>
+                
+                
+               `; //"" + emails
+
+           
+
+            
+              
+            })
+            document.getElementById('h').innerHTML = heading + " </table>";
+           
+            
+        })
+
+
+
+    </script>
+
+</body>
+</html>

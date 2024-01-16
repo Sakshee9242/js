@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="op"></div>
+
+    <script>
+        fetch('students.json')
+        .then((x)=>{return x.json();})
+        .then((y)=>{
+            // console.log(y)
+            var h =`
+            <table border='1'>
+                 <tr>
+                    <td>Name</td> 
+                    <td>Age</td> 
+                    <td>Course</td> 
+                </tr>`;
+            y.map((v)=>{
+                h = h + `
+                    <tr>
+                        <td>
+                            ${v.name}
+                         </td>
+                         <td>
+                            ${v.age}
+                         </td>
+                         <td>
+                            ${v.course}
+                         </td>
+
+                    </tr>
+                    
+                    `;
+            })
+
+            document.getElementById('op').innerHTML = h + "</table>"
+        })
+    </script>
+    
+</body>
+</html>

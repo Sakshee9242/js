@@ -1,0 +1,23 @@
+[
+    {
+        "name":"Mann",
+        "age":20,
+        "course":"WD"
+    },
+    {
+        "name":"Mann1",
+        "age":201,
+        "course":"WD1"
+    },
+    {
+        "name":"Mann2",
+        "age":202,
+        "course":"WD2"
+    },
+    {
+        "name":"Mann3",
+        "age":203,
+        "course":"WD3"
+    }
+    
+]
