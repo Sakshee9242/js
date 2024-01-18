@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Father{
+            getX(){
+                document.write(200 + "<br>")
+            }
+        }
+        class Son extends Father{
+
+        }
+        class Mother{
+            getY(){
+                document.write(200)
+            }
+        }
+        class Daughter extends Mother{
+
+        }
+        const obj = new Son;
+        obj.getX()
+
+        const obj2 = new Daughter
+        obj2.getY();
+    </script>
+</body>
+</html>

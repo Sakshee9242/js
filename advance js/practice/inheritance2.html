@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Father{
+            getRupees(){
+                document.write(400 + "<br>")
+            }
+        }
+        class Mother extends Father{
+            getY(){
+                document.write(200 + "<br>")
+                
+            }
+        }
+        class Daughter extends Mother{
+            getZ(){
+                document.write(100 + "<br>")
+                
+            }
+        }
+        class Son extends Daughter{
+            getA(){
+                document.write(50 + "<br>")
+                
+            }
+        }
+
+        const obj = new Mother;
+        const obj1 = new Daughter;
+        const obj2 = new Son;
+        obj.getY();
+        obj1.getZ();
+        obj2.getA()
+    </script>
+</body>
+</html>
