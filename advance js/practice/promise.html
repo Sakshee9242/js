@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myPromise = new Promise((res,err)=>{
+            var x;
+        if(x)
+        {
+            return res("connected");
+        }
+        else
+        {
+            return err("not connected");
+        }
+        
+        })
+        myPromise.then((res)=>{
+           console.log(res)
+        },(err)=>{
+           console.log(err)
+
+        })
+    </script>
+</body>
+</html>

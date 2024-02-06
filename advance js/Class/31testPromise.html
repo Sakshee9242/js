@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+      
+
+        function xyz(test)
+        {
+            console.log(test)
+        }
+        const x = new Promise((r,e)=>{
+            if(!r)
+            {
+                return r("res")
+            }
+            else{
+                return e("err")
+            }
+        })
+
+        x.then(
+            (res)=>{ xyz(res) },
+            (err)=>{xyz(err)}
+            )
+
+    </script>
+    
+</body>
+</html>

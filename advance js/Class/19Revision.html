@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class T 
+        {
+            x=12;
+            y="hi";
+            z=[1,2,3];
+
+          
+
+           a= function T123()
+            {
+                return "a<br>";
+            }
+
+           b=  function ()
+            {
+                document.write("b<br>");
+            }
+
+            c=  ()=>
+            {
+                document.write("c<br>");
+            }
+
+            d()
+            {
+                document.write("d<br>");
+            }
+            constructor()
+            {
+                document.write("const<br>");
+            }
+
+            static e()
+            {
+                document.write("e<br>");
+            }
+        }
+
+        var obj1 = new T;
+        var obj2 = new T;
+        var obj3 = new T;
+        var obj4 = new T;
+
+        // document.write(obj1.x+"<br>");
+        // document.write(obj2.y+"<br>");
+        // document.write(obj1.z+"<br>");
+
+        document.write(obj1.a());
+        obj2.b();
+        obj1.c();
+        obj1.d();
+        obj2.d();
+        T.e();
+    </script>
+    
+</body>
+</html>

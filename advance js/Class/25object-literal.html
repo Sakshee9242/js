@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // object-literal : when function is the value of the index of an object it becomes object-literal
+        obj = {
+            "name":"Hiren",
+            "age":12,
+            "course":"WD",
+            "display":function (){
+
+                return obj.name + " " +this.course
+
+            }
+        }
+
+        document.write(obj.display())
+
+      
+
+    
+
+    </script>
+    
+</body>
+</html>

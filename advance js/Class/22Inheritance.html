@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        class Parent
+        {        
+            xyz=12;             
+            getX()
+            {
+                var prop ="Parent Prop";
+                document.write(prop);
+            }
+        }
+
+        class Child extends Parent 
+        {
+            myProp()
+            {
+                document.write("CHildProp")
+            }
+        }
+
+        // const obj = new Parent;
+        // obj.getX();
+
+        const obj = new Child;
+        obj.getX();
+        obj.myProp();
+
+        document.write(obj.xyz)
+
+    </script>
+    
+</body>
+</html>
