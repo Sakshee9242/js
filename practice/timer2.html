@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <span id="hour"></span> m:
+        <span id="mint"></span> s:
+        <span id="sec"></span> ms
+    </p>
+    <button>click</button>
+</body>
+<script>
+    let hour = document.getElementById("hour")
+    let mint = document.getElementById("mint")
+    let sec = document.getElementById("sec")
+    let btn = document.querySelector("button")
+    let h = 0;
+    let m = 0;
+    let s = 0;
+    mint.innerHTML = "00"
+    sec.innerHTML = "00"
+    hour.innerHTML = "00"
+    btn.addEventListener("click", () => {
+        setInterval(() => {
+            s++
+            if (s == 60) {
+                s = 0;
+                m += 1;
+                if (m == 60) {
+                    m = 0
+                    h += 1;
+                }
+            }
+            mint.innerHTML = m
+            sec.innerHTML = s
+            hour.innerHTML = h
+            if (s < 10) {
+                sec.innerHTML = "0" + s;
+            }
+            if (m < 10) {
+                mint.innerHTML = "0"+ m
+            }
+            if (h < 10) {
+                hour.innerHTML = "0"+h
+            }
+        }, 10)
+    })
+</script>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="counter"><span id="hour">00</span>:<span id="mint">00</span>:<span id="sec">00</span></p>
+    <button id="btn">START</button>
+
+    <script>
+        let timer = document.querySelector("#counter");
+        let sec = document.querySelector("#sec");
+        let mint = document.querySelector("#mint");
+        let hour = document.querySelector("#hour");
+        let btn = document.querySelector("#btn");
+        let timer1 = 0;
+        let timer2 = 0;
+        let timer3 = 0;
+        btn.addEventListener("click", ()=>{
+
+            setInterval(()=>{
+                timer1++
+    // span2.innerHTML = timer1;
+    if(timer1==60){
+        sec.innerHTML = timer1
+        timer1=0
+        timer2++
+    
+        if(timer2==60){
+            mint.innerHTML = timer2
+            timer2=0
+            // timer1++
+            timer3++
+            hour.innerHTML = timer3
+        }
+    }
+            },1000)
+    
+})
+    
+    // if(timer1<10){
+    //     span2.innerHTML = "0" + timer1  
+    // }
+    // if(timer2<10){
+    //     span1.innerHTML = "0" + timer2
+    // }
+
+
+
+
+
+
+
+
+
+        //   span1.innerHTML = timer1++
+        //     if(timer1 == 0){
+        //       timer2++
+        //       span2.innerHTML = timer2
+        //     }
+        //     span1.inneHTML = timer1
+            // console.log(1234)
+        // 
+        
+        
+   
+    
+        
+    </script>
+</body>
+</html>

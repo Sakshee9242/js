@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="/submit_form.php" method="post">
+        <input type="text">
+        <input type="button" value="submit">
+    </form> -->
+
+    <script>
+        // let a = 5;
+        // let b = a;
+        //  b = 10
+        //  console.log(a,b)
+
+ var globalVariable = "Hello world";
+function sendMessage(){
+return globalVariable; // can access globalVariable since it's written in global spac
+}
+function sendMessage2(){
+return sendMessage(); // Can access sendMessage function since it's written in global
+}
+sendMessage2(); // Returns “Hello world
+
+    </script>
+
+</body>
+</html>
