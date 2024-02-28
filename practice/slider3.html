@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        div{
+            position: relative;
+            width: 300px;
+        }
+        img{
+            height: 300px;
+            width: 300px;
+        }
+        button{
+            background-color: black;
+            color: aliceblue;
+        }
+        #btn2{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        #btn1{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+   <div class="img-box">
+    <img src="gallery-1.jpeg" alt="" id="i1">
+    <button id="btn1" onclick="Onclick1()"><</button>
+    <button id="btn2" onclick="Onclick2()">></button>
+   </div> 
+
+   <script>
+      img1 = document.getElementById("i1")
+        console.log(img1);
+
+      function Onclick1(){
+        if(img1.src.match("gallery-1.jpeg")){
+            img1.src = "gallery-2.jpeg"
+        }
+        else if(img1.src.match("gallery-2.jpeg")){
+            img1.src = "gallery-3.jpeg"
+        }
+        else if(img1.src.match("gallery-3.jpeg")){
+            img1.src = "gallery-4.jpeg"
+        }
+        else{
+            img1.src = "gallery-1.jpeg"
+        }
+        setTimeout(Onclick1,1000)
+      }
+
+      function Onclick2(){
+        if(img1.src.match("gallery-4.jpeg")){
+            img1.src = "gallery-3.jpeg"
+        }
+        else if(img1.src.match("gallery-3.jpeg")){
+            img1.src = "gallery-2.jpeg"
+        }
+        else if(img1.src.match("gallery-2.jpeg")){
+            img1.src = "gallery-1.jpeg"
+        }
+        else{
+            img1.src = "gallery-4.jpeg"
+        }
+      }
+   </script>
+</body>
+</html>

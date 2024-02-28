@@ -13,10 +13,10 @@
             animation: slide;
             animation: slide 1s;
         }
-        @keyframes slide{
+        /* @keyframes slide{
             0%{transform: translate(-200%,0) scale(1); opacity: 0;}
            100%{transform: translate(0%,0) scale(1.2); opacity: 1;}
-        }
+        } */
         div 
         {
             overflow: hidden;
@@ -73,17 +73,12 @@
         img_arr[index].style.display = "block";
         img_arr[index].classList.add('xyz')
         index++;//4
-
         if(index==4)
         {
             index = 0;
         }
-
-
-
          setTimeout("Slider()",1000)
        }
-
        Slider()
 
     </script>
