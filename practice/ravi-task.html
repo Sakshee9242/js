@@ -49,20 +49,30 @@
     </div>
 
     <script>
+      let interval ;
         let number = document.getElementById("number")
         let inp  = document.getElementById("inp")
 
         document.getElementById("btn1").addEventListener("click" ,()=>{
-           number.innerHTML = parseInt(number.innerHTML) + parseInt(inp.value)
+        //  number.innerHTML = parseInt(number.innerHTML) + parseInt(inp.value)
+        interval = setInterval(() => {
+            number.innerHTML = parseInt(number.innerHTML) + parseInt(inp.value)
+         },parseInt(inp.value) * 1000 );
           
         })
         
         document.getElementById("btn2").addEventListener("click" ,()=>{
-           number.innerHTML = parseInt(number.innerHTML) - parseInt(inp.value)
+          //  number.innerHTML = parseInt(number.innerHTML) - parseInt(inp.value)
+
+         interval = setInterval(() => {
+            number.innerHTML = parseInt(number.innerHTML) - parseInt(inp.value)
+         },parseInt(inp.value) * 1000 );
+          
 
         })
         document.getElementById("btn3").addEventListener("click" ,()=>{
            number.innerHTML = 0
+           clearInterval(interval)
            inp.value = number.innerHTML
         })
         
