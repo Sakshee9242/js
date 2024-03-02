@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input onkeypress="Write()" id="inp1" type="text" value="">
+        <p id="para"></p>
+
+
+        <script>
+            var inp = document.getElementById("inp1")
+            var para = document.getElementById("para")
+            function Write(){
+                para.innerHTML = inp.value
+                 if(inp.value == ""){
+                    alert("Please type Somthing")
+                 }
+                // else{
+                //     alea
+                //     para.innerHTML = ""
+                // }
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgb(221, 131, 131),rgb(171, 171, 190),rgb(138, 158, 138));
+         }
+         h1{
+            text-align: center;
+         }
+         #btn1, #btn2{
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+         }
+         input{
+            width: 100px;
+            height: 50px;
+            font-size: 30px;
+            margin-top: 5px;
+            text-align: center;
+            outline: none;
+            border: none;
+         }
+         #btn3
+         {
+            width: 110px;
+            height: 50px;
+            margin-top: 5px;
+         }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="number">0</h1>
+    <button id="btn1">+</button>
+    <button id="btn2">-</button>
+    <br>
+    <input id="inp" type="text">
+    <br>
+    <button id="btn3">Reset</button>
+    </div>
+
+    <script>
+        let number = document.getElementById("number")
+        let inp  = document.getElementById("inp")
+
+        document.getElementById("btn1").addEventListener("click" ,()=>{
+           number.innerHTML = parseInt(number.innerHTML) + parseInt(inp.value)
+          
+        })
+        
+        document.getElementById("btn2").addEventListener("click" ,()=>{
+           number.innerHTML = parseInt(number.innerHTML) - parseInt(inp.value)
+
+        })
+        document.getElementById("btn3").addEventListener("click" ,()=>{
+           number.innerHTML = 0
+           inp.value = number.innerHTML
+        })
+        
+
+        
+
+
+        
+
+    </script>
+</body>
+</html>
