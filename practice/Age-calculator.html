@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         body{
-            height: 100vh;
+            height: 97vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -26,11 +26,8 @@
             color: blanchedalmond;
             letter-spacing: 2px;
             padding: 5px 0px;
-        }
-        #date{
-            overflow: hidden;
-        }
-        
+        }  
+
         input{
             padding: 10px 30px;
             border: none;
@@ -39,6 +36,9 @@
             font-size: 20px;
             color: mediumseagreen;
             text-align: center;
+        }
+        #show{
+            font-size: 15px;
         }
         button{
             padding: 10px 30px;
@@ -60,6 +60,7 @@
 </head>
 <body>
     <div class="container">
+        <h1></h1>
         <h1>Enter Your Date Of Birth</h1>
         <h2>In This Formet: MM/DD/YY</h2>
         <input type="date" id="DOB">
@@ -81,7 +82,7 @@
               var dateOfBirth = new Date(Dob.value);
               var age = today.getFullYear() - dateOfBirth.getFullYear();
             var m = today.getMonth() - dateOfBirth.getMonth();
-            var date = today.getDate() - dateOfBirth.getDate()
+            var date = today.getDate() - dateOfBirth.getDate();
 
             if(Dob.value == "")
             {
