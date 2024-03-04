@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="inp1" />
+    <button id="btn">Add</button>
+    <ul id="ul"></ul>
+
+    <script>
+      let ul = document.getElementById("ul");
+
+      document.getElementById("btn").addEventListener("click", () => {
+        if(inp1.value==""){
+            alert("please type something")
+        }else{
+            coderun()
+            if(inp1.value!==""){
+                    inp1.value = ""
+                }
+        }
+        function coderun(){
+            let inp1 = document.getElementById("inp1");
+        let unorderd = document.createElement("li");
+        unorderd.innerHTML = `${inp1.value}<input value="${inp1.value}" class="inp2" disabled></input>
+        <button onclick="Edit(this)" id="edit">Edit</button>
+        <button onclick="xyz(this)">Delete</button>`;
+      
+            // if(unorderd){
+                if (unorderd) {
+                    let allinputs = document.querySelectorAll(".inp2");
+                    let x;
+                    for (let index = 0; index < allinputs.length; index++) {
+                        x = allinputs[index];
+                        if (x.value == inp1.value) {
+                            alert("value already same");
+                            return
+                        }
+                    }
+                }
+                ul.appendChild(unorderd);
+        }
+      });
+      function xyz(X) {
+        let parent = X.parentElement;
+        parent.remove();
+      }
+      function Edit(element) {
+        let r = element.parentElement;
+        let input = r.querySelector("input");
+        let li2 = document.createElement("li");
+        ul.append(li2);
+
+        console.log(input.value);
+        if (input.disabled == true) {
+          input.disabled = false;
+        } else {
+          input.disabled = true;
+        }
+
+        //  console.log(input)
+      }
+    </script>
+  </body>
+</html>
