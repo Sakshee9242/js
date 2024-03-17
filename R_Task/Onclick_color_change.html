@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        ul li{
+            list-style: none;
+        }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="inp" />
+    <button id="btn">Add</button>
+    <ul id="ul"></ul>
+
+    <script>
+      let btn = document.querySelector("#btn");
+      let inp = document.querySelector("#inp");
+      let ul = document.querySelector("#ul");
+
+      btn.addEventListener("click", () => {
+        if(inp.type=="number"){
+            alert("hello")
+        }
+        let Color = document.createElement("li");
+        Color.innerHTML = inp.value;
+        ul.appendChild(Color);
+
+        Color.addEventListener("click", () => {
+          document.body.style.background = inp.value;
+          console.log(inp.value)
+        });
+      });
+    </script>
+  </body>
+</html>

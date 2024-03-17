@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let arr = ["Apple", "Mango", "Orange", "Watermelon", "Grapes"];
+        let Unorder = document.createElement("ul");
+        document.body.append(Unorder);
+        
+        arr.forEach((ele, i)=>{
+            let li = document.createElement("li");
+            li.innerHTML = ele;
+            Unorder.append(li);
+            if(i===0){
+                li.style.marginTop   = "35px"   
+                  }
+            
+         })
+
+         arr1 = ["Papaya", "Carrot", "Cherry", "Pineapple", "Guava"]
+         for(i=0;i<arr1.length;i++){
+            let li = document.createElement("li");
+            li.innerHTML = arr1[i]
+            Unorder.append(li);
+            if(i===0){
+                li.style.marginTop   = "15px"   
+                  }
+            
+         }
+
+    
+
+
+
+        //  arr.map((ele)=>{
+        //     let li = document.createElement("li");
+        //     li.innerHTML = ele
+        //     Unorder.append(li);
+        //  })
+
+            // li.innerHTML =  arr[0];
+            // li1.innerHTML = arr[1];
+            // li2.innerHTML = arr[2];
+            // li3.innerHTML = arr[3];
+            // li4.innerHTML = arr[4];
+    </script>
+</body>
+</html>

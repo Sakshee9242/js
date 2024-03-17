@@ -7,7 +7,8 @@
 </head>
 <body>
 
-    <script>
+    <!-- <script>
+
 
 
 const arr = ["hi","Mann","Why Late"];
@@ -56,6 +57,26 @@ console.log(map1)
 //         }while(i<arr.length)
 
     </script>
-    
+     -->
+     <script>
+        let ary = [
+            {
+                img_src:"https://images.unsplash.com/photo-1709891798937-fd431bd7e10b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "ravi"
+            },
+            {
+                img_src:"https://images.unsplash.com/photo-1709891798937-fd431bd7e10b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "sakshee"
+            },
+        ]
+        ary.forEach((element)=>{
+            let img = document.createElement("img")
+            let h1 = document.createElement("h1")
+h1.innerHTML = element.title
+            img.src = element.img_src
+            document.querySelector(".box").append(img)
+            document.querySelector(".box").append(h1)
+        })
+     </script>
 </body>
 </html>
