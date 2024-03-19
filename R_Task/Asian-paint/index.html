@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        user-select: none;
+      }
+      .container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100vh;
+      }
+      .container img {
+        width: 100%;
+        height: 100%;
+      }
+      .inline {
+        display: flex;
+        justify-content: center;
+      }
+
+      .box {
+        list-style: none;
+        height: 50px;
+        width: 50px;
+        border: 1px solid gray;
+        border-radius: 50%;
+        margin-right: 2px;
+        margin-top: 10px;
+      }
+      .box:hover{
+        transform: scale(1.05);
+        transition: .8s;
+      }
+      .row {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 8%;
+      }
+      .img-wrapper{
+        position: absolute;
+        right: 10px;
+      }
+      .img-box{
+        padding: 5px;
+        width: 250px;
+        height: 125px;
+      }
+      .img-box img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        border: 1px solid black;
+      }
+      .img-box:hover img{
+         transform: scale(1.05);
+         transition: .8s;
+      }
+     .wrong{
+        margin-left: 48px;
+        color: gray;
+        font-size: 25px;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="container text-center">
+        <div class="img-wrapper">
+            <div class="img-box">
+                <img src="./WhatsApp Image 2024-03-19 at 18.39.36_88fda08b.jpg" alt="">
+            </div>
+            <div class="img-box">
+                <img src="./WhatsApp Image 2024-03-19 at 18.39.36_d44d5f09.jpg" alt="">
+            </div>
+            <div class="img-box">
+                <img src="./WhatsApp Image 2024-03-19 at 18.39.37_06c0531c.jpg" alt="">
+            </div>
+            <div class="img-box">
+                <img src="./WhatsApp Image 2024-03-19 at 18.39.37_88baef34.jpg" alt="">
+            </div>
+            <div class="img-box">
+                <img src="./WhatsApp Image 2024-03-19 at 18.39.37_cc0b5d52.jpg" alt="">
+            </div>
+        </div>
+      <div class="row p-5">
+        <div class="col"></div>
+      </div>
+      <img src="img.png" alt="" class="img-fluid" />
+    </div>
+
+    <script>
+      let container = document.querySelector(".container");
+      let ulDiv = document.createElement("div");
+      ulDiv.className = "center";
+      let col = document.querySelector(".col");
+      let input = document.createElement("input");
+      let button = document.createElement("button");
+      button.classList.add(
+        "btn",
+        "btn-info",
+        "p-0",
+        "border-black",
+        "border-2",
+        "ms-1"
+      );
+      let btnText = document.createTextNode("Add Color");
+      button.append(btnText);
+      let ul = document.createElement("ul");
+      ul.className = "inline";
+      ulDiv.append(ul);
+
+      col.append(input, button, ulDiv);
+
+      //    button click container bg change
+      button.addEventListener("click", () => {
+        if (input.value == "") {
+          alert("Please Type color that you want");
+          return;
+        } else {
+          let li = document.createElement("li");
+          let removebtn = document.createElement("span")
+          removebtn.setAttribute("class" , "wrong")
+          let removebtnText = document.createTextNode("x")
+          removebtn.append(removebtnText)
+          ul.append(removebtn) 
+          li.innerHTML = input.value;
+          li.style.backgroundColor = li.innerHTML; 
+          li.innerHTML = " ";
+          
+          ul.appendChild(li);
+          li.appendChild(removebtn);
+          li.className = "box";
+          removebtn.addEventListener("click", (event)=>{
+               event.target.parentElement.remove()
+        })
+        console.log(removebtnText)
+          li.addEventListener("click", () => {
+            if(container.style.backgroundImage){
+                container.style.removeProperty("background-image")
+            }
+            container.style.backgroundColor = li.style.backgroundColor;
+          });
+          input.value = "";
+        }
+      });
+      let allimg = document.querySelectorAll(".img-wrapper img")
+      allimg.forEach(elm=>{
+        elm.addEventListener("click",(e)=>{
+
+            console.log(e.target.src)
+            let img_fluid = document.querySelector(".img-fluid")
+            container.style.backgroundImage = `Url("${e.target.src}")`
+                        // img_fluid.style.background = `Url${e.target.src}`
+        })
+      })
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
