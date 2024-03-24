@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>local</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" class="name-1" placeholder="FIrst name" /> <br />
+      <input type="text" class="name-2" placeholder="Last name" /> <br />
+      <input type="text" class="name-3" placeholder="subject" /> <br />
+      <button type="submit">submit</button>
+    </form>
+    <div class="output"></div>
+    <script>
+      let fname = document.querySelector(".name-1");
+      let lname = document.querySelector(".name-2");
+      let sbj = document.querySelector(".name-3");
+
+      document.querySelector("form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        let getitem = JSON.parse(localStorage.getItem("fname")) || [];
+        getitem.push({
+          fname: fname.value,
+          lname: lname.value,
+          subname: sbj.value,
+        });
+        localStorage.setItem("fname", JSON.stringify(getitem));
+        // localStorage.setItem("lname",lname.value);
+        // localStorage.setItem("sbj",sbj.value);
+        // let x = localStorage.getItem("ahhfui");
+        displayFUn();
+      });
+
+      function displayFUn() {
+        let getitem = JSON.parse(localStorage.getItem("fname")) || [];
+        let table = `<table border>
+            <tr>
+                <td>first name</td>
+                <td>last name</td>
+                <td>subject</td>
+                <td>remove item</td>
+                </tr>
+            `;
+        getitem.forEach((elm,index) => {
+          table += `
+        <tr>
+                <td>${elm.fname}</td>
+                <td>${elm.lname}</td>
+                <td>${elm.subname}</td>
+                <td><button onclick=removelist(${index})> remove</button></td>
+                </tr>
+        `;
+        });
+        document.querySelector(".output").innerHTML = table +"</table>"
+      }
+function removelist(x){
+    let getitem = JSON.parse(localStorage.getItem("fname")) || [];
+    getitem.splice(x,1)
+    localStorage.setItem("fname", JSON.stringify(getitem));
+    displayFUn()
+}
+      displayFUn()
+    </script>
+  </body>
+</html>

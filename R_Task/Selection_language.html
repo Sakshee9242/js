@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Language</h1>
+    </div>
+
+    <div class="Language1">
+      <input type="checkbox" id="select" /> <span>Select All</span> <br />
+      <input type="checkbox" class="Language" /> <span>Javascript</span> <br />
+      <input type="checkbox" class="Language" /> <span>C++</span> <br />
+      <input type="checkbox" class="Language" /> <span>Java</span> <br />
+      <input type="checkbox" class="Language" /> <span>Python</span> <br />
+      <input type="checkbox" class="Language" /> <span>HTML</span> <br />
+      <input type="checkbox" class="Language" /> <span>PHP</span> <br />
+      <input type="checkbox" class="Language" /> <span>Kotlin</span> <br />
+    </div>
+
+    <script>
+      let select = document.getElementById("select");
+      let language = document.querySelectorAll(".Language");
+
+      select.addEventListener("change", () => {
+        language.forEach((element, i) => {
+          element.checked = select.checked;
+        });
+      });
+
+      language.forEach((item) => {
+        item.addEventListener("change", () => {
+          let valueChange = true; //ye true hai thik h aay amsg me
+
+
+
+          console.log(valueChange)
+          language.forEach((element) => {
+            if (!element.checked) {
+              valueChange = false;
+            }
+           select.checked = valueChange;// abhi hamre select box checked hoga ya nhi btayo haan q? kyuki true h na checkbox ki value haa q ki value chnage ki vlaue true h abhi muhe kya krnna h ki isko true tb hi krvana h jb sabhi checkbox chekd ho  okay
+            // abhi dekhi me kesi bhi checkbox me click krunga to mere selectall checked hoga kro ab
+          }); //aay amsj me///////////////////////////////////////////////////////////////////////////////////// haaaa aaya
+        
+
+
+
+
+
+
+
+
+
+          //dekho fir mene kya kra ki vaps mere sabhi checkbox ko target krna h condiciton di ki agr mera elemetn chekced nhi h to claue ko false kr do is care me kya hho raha hoga ki hr baar me click krunga and hr baar mera foreach chalega and baar baar check krga ki sare checkboc cheked h ya nhi agr sare select ho gye to ye value false ho true kr dega okkkk
+        });
+      });
+
+    // is valuechange m kya mil rha h particular language?? ruko btata hu 
+    // par mil lya rha h isme u?? checkbox ya particular language??
+    // is true me aapko kuch ni mil raha h hm is true ke base pr hamre select box aall to target krva reheh okay
+    </script>
+  </body>
+</html>

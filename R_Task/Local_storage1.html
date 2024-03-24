@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" class="name1"> <br>
+        <input type="text" class="name2"> <br>
+        <input type="text" class="subject1"> <br>
+        <input type="text" class="subject2"> <br>
+        <button type="submit">submit</button>
+    </form>
+    <div class="output"></div>
+
+    <script>
+        let fname = document.querySelector(".name1")
+        let lname = document.querySelector(".name2")
+        let sbj1 = document.querySelector(".subject1")
+        let sbj2 = document.querySelector(".subject2")
+        let btn = document.querySelector(".btn")
+ 
+         document.querySelector("form").addEventListener("submit" , (ele) => {  
+            ele.preventDefault();
+             let getitem = JSON.parse(localStorage.getItem("fname")) || [] ;
+             getitem.push({
+                fname : fname.value,
+                lname : lname.value,
+                subname : sbj1.value,
+                subname1 : sbj2.value
+             });
+            // localStorage.setItem("fname" , JSON.stringify(getitem))
+            //  let getItem = localStorage.getItem("fname");
+            // localStorage.setItem("fname" , fname.value );
+            // localStorage.setItem("lname" , lname.value);
+
+            localStorage.setItem("fname" , JSON.stringify(getitem));
+            console.log(getitem);
+
+            DisplayFun()
+         });
+         function DisplayFun()
+{
+    let getitem = JSON.parse(localStorage.getItem("fname")) || [] ;
+    let table = `<table>
+        <tr>
+            <td>fname</td>
+            <td>lname</td>
+            <td>subname</td>
+            <td>subject</td>
+            <td>subject1</td>
+            </tr>` ;
+            getitem.forEach((element, index )=> {
+                table += `
+                <tr>
+                    <td>${element.fname}</td>
+                    <td>${element.lname}</td>
+                    <td>${element.subname}</td>
+                    <td>${element.subname1}</td>
+                    <td onclick= remove(${index})>remove</td>
+                    </tr>`
+            });
+            document.querySelector(".output").innerHTML = table + "</table>"
+}
+  function remove(x){
+    let getitem = JSON.parse(localStorage.getItem("fname")) || [] ;
+    getitem.splice(x,1)
+    localStorage.setItem("fname" , JSON.stringify(getitem));
+   DisplayFun()
+  }
+  DisplayFun()
+
+
+
+    //    document.querySelector("form").addEventListener("submit", (event) => {})
+
+    </script>
+</body>
+</html>
